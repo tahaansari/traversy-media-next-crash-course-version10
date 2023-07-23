@@ -1,10 +1,17 @@
 import React from "react";
+import aboutStyle from "../styles/About.module.css";
+import Head from "next/head";
 
 const about = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <>
+      <Head>
+        <title>About Page</title>
+      </Head>
+      <div className={aboutStyle.bgcolor}>
+        <h1>About</h1>
+      </div>
+    </>
   );
 };
 
