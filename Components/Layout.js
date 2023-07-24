@@ -1,10 +1,12 @@
 import React from "react";
-import Layout from "../styles/Layout.module.css";
+import styles from "../styles/Layout.module.css";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <div className={Layout.navigation}>
-      <h1>Layout</h1>
+    <div className={styles.navigation}>
+      <header>Header</header>
+      {children}
+      <footer>footer</footer>
     </div>
   );
 };
