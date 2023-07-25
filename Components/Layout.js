@@ -1,13 +1,14 @@
-import React from "react";
-import styles from "../styles/Layout.module.css";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import Nav from "../Components/Nav";
 
 const Layout = ({ children }) => {
   return (
-    <div className={styles.navigation}>
-      <header>Header</header>
+    <>
+      <Nav></Nav>
+      <Header></Header>
       {children}
-      <footer>footer</footer>
-    </div>
+    </>
   );
 };
 
