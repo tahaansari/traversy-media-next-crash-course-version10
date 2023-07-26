@@ -1,5 +1,6 @@
 import Head from "next/head";
 import ArticleList from "../Components/ArticleList";
+import { server } from "../config";
 
 export default function Home({ todos }) {
   console.log(todos);
@@ -17,7 +18,7 @@ export default function Home({ todos }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch(`${server}/api/articles/`);
   const todos = await res.json();
   return {
     props: {
