@@ -1,13 +1,10 @@
-import React from "react";
+import Meta from "../Components/Meta";
 import aboutStyle from "../styles/About.module.css";
-import Head from "next/head";
 
 const about = () => {
   return (
     <>
-      <Head>
-        <title>About Page</title>
-      </Head>
+      <Meta title="About Page"></Meta>
       <div className={aboutStyle.bgcolor}>
         <h1>About</h1>
       </div>
