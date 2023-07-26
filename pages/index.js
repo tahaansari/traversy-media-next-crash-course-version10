@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ArticleList from "../Components/ArticleList";
 
 export default function Home({ todos }) {
   console.log(todos);
@@ -9,16 +10,14 @@ export default function Home({ todos }) {
       </Head>
       <div>
         <h1>Welcome to Next</h1>
-        {todos.map((todo) => {
-          return <p style={{ marginBottom: "1rem" }}>{todo.title}</p>;
-        })}
+        <ArticleList todos={todos} />
       </div>
     </>
   );
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const todos = await res.json();
   return {
     props: {
